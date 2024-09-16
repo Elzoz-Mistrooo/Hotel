@@ -8,6 +8,7 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World');
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+const port = 6002
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
