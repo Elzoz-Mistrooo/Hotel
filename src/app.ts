@@ -8,8 +8,14 @@ import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import morgan from "morgan";
 import compression from "compression";
-
+import { Request, Response } from "express";
 const app = express();
+
+
+app.get('/', (req: Request, res: Response) => {
+  res.send('Hello application');
+});
+
 
 // Basic middlewares
 app.use(express.json({ limit: "10kb" }));
